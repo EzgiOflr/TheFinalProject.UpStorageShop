@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nck7nDiDMmhzTgkjNR0NJ7AMDhSFI+vbw+QUkq9pZ+5iJohRYjv/rvb6EOqcmPod50SVyT1m5pNVB1W4YOhj8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ezgi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
