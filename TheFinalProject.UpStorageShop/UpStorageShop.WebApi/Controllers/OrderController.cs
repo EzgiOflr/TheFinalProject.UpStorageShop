@@ -1,9 +1,11 @@
 ﻿using Application.Features.Orders.Commands.Add;
 using Application.Features.Orders.Commands.Queries.GetOrders;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UpStorageShop.WebApi.Controllers
 {
+    [Authorize]
     public class OrderController : ApiControllerBase
     {
         [HttpPost("CreateOrder")]

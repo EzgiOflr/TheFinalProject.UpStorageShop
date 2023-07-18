@@ -1,9 +1,11 @@
 ﻿using Application.Features.OrderEvents.Commands.Add;
 using Application.Features.OrderEvents.Queries.GetOrderEventsByOrderId;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UpStorageShop.WebApi.Controllers
 {
+    [Authorize]
     public class OrderEventController : ApiControllerBase
     {
         [HttpPost("CreateOrderEvent")]

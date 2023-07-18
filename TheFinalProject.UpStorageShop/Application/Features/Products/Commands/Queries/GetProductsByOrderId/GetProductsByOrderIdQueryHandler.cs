@@ -1,4 +1,4 @@
-﻿using Application.Interfaces;
+﻿using Application.Common.Interfaces;
 using Domain.Dtos;
 using Domain.Entities;
 using MediatR;

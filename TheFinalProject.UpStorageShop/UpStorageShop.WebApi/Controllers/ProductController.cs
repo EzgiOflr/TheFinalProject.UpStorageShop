@@ -1,9 +1,11 @@
 ﻿using Application.Features.Products.Commands.Add;
 using Application.Features.Products.Commands.Queries.GetProductsByOrderId;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UpStorageShop.WebApi.Controllers
 {
+    [Authorize]
     public class ProductController : ApiControllerBase
     {
         [HttpPost("CreateProducts")]

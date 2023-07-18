@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\Application.csproj": {
+    "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Ezgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj"
+              "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
+    "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Ezgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -137,6 +137,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -162,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Ezgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -190,8 +198,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Ezgi\\Desktop\\repos\\TheFinalProject.UpStorageShop\\Application\\Application.csproj"
+              "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj"
               }
             }
           }
@@ -206,6 +214,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.6.0, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -222,9 +242,17 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.31.0, )"
             }
           },
           "imports": [

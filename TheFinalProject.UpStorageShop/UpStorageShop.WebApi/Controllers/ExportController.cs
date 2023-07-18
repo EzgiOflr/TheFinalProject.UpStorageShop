@@ -12,9 +12,11 @@ using MediatR;
 using Application.Features.Exports.Queries.OrdersExport;
 using Application.Features.Exports.Queries.GetOrderEventsByOrderIdExport;
 using Application.Features.Exports.Queries.GetProductsByOrderIdExport;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UpStorageShop.WebApi.Controllers
 {
+    [Authorize]
     public class ExportController : ApiControllerBase
     {
         [HttpPost("OrdersExport")]

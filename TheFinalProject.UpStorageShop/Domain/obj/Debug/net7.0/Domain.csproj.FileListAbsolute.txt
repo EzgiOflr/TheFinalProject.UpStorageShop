@@ -46,3 +46,15 @@ C:\Users\Ezgi\Desktop\repos\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.
 C:\Users\Ezgi\Desktop\repos\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\Ezgi\Desktop\repos\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\Ezgi\Desktop\repos\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\Ezgi\Source\Repos\TheFinalProject.UpStorageShop\TheFinalProject.UpStorageShop\Domain\obj\Debug\net7.0\ref\Domain.dll

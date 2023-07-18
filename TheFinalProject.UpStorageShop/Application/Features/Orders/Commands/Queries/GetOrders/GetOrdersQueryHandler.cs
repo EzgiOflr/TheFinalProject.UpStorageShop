@@ -1,5 +1,5 @@
-﻿using Application.Features.Products.Commands.Queries.GetProductsByOrderId;
-using Application.Interfaces;
+﻿using Application.Common.Interfaces;
+using Application.Features.Products.Commands.Queries.GetProductsByOrderId;
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
