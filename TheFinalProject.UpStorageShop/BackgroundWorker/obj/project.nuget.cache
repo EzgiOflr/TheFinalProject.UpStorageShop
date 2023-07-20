@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tmv0Nl+/pdJjAvpkcAO/aHi36HJc0f1OAzpIEdt73aEjvltuLs1rbRpNJGgUOe0muh0CzVJ+0ojokZUtX7L1CQ==",
+  "dgSpecHash": "r3L5lZEz3i7wBW5MvQe0X3pXTrdRlJFKSRD58jBH/q1llR/iHrpfOjFYt4n0X1LghGgYyEFk6KKT3pPVpfFyAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj",
+  "projectFilePath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezgi\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\Ezgi\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",

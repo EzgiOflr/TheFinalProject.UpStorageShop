@@ -6,7 +6,7 @@ using Domain.Entities;
 
 namespace Infrastructure.Persistence.Contexts
 {
-    public class IdentityContext : IdentityDbContext<User, Role, string, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
+    public class IdentityContext : IdentityDbContext<User, Role, Guid, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
 
 

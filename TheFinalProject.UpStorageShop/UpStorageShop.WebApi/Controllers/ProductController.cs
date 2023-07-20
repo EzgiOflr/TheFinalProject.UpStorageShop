@@ -1,5 +1,5 @@
 ﻿using Application.Features.Products.Commands.Add;
-using Application.Features.Products.Commands.Queries.GetProductsByOrderId;
+using Application.Features.Products.Queries.GetProductsByOrderId;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

@@ -2,7 +2,7 @@
 
 namespace Domain.Identity
 {
-    public class UserClaim:IdentityUserClaim<string>
+    public class UserClaim:IdentityUserClaim<Guid>
     {
     }
 }

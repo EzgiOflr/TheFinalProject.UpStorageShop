@@ -1,10 +1,12 @@
 ﻿using Application.Common.Helpers;
 using Application.Common.Interfaces;
-using Application.Features.Orders.Commands.Queries.GetOrders;
 using ClosedXML.Excel;
 using Domain.Common;
+using Domain.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using System.Net;
@@ -17,16 +19,24 @@ namespace Application.Features.Exports.Queries.OrdersExport
     {
         private readonly IUpStorageShopDbContext _upStorageShopDbContext;
         private readonly IHostingEnvironment _env;
+        private readonly UserManager<User> _userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public OrdersExportQueryHandler(IUpStorageShopDbContext upStorageShopDbContext, IHostingEnvironment env)
+        public OrdersExportQueryHandler(IUpStorageShopDbContext upStorageShopDbContext, IHostingEnvironment env, UserManager<User> userManager, IHttpContextAccessor httpContextAccessor)
         {
             _upStorageShopDbContext = upStorageShopDbContext;
             _env = env;
+            _userManager = userManager;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<Response<string>> Handle(OrdersExportQuery query, CancellationToken cancellationToken)
         {
-            var orders = await _upStorageShopDbContext.Order.Include(x => x.OrderEvent).Include(x => x.Product).OrderByDescending(x => x.CreatedOn).ToListAsync();
+            var userId = (Guid)_httpContextAccessor.HttpContext.Items["User"];
+
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+
+            var orders = await _upStorageShopDbContext.Order.Include(x => x.OrderEvent).Include(x => x.Product).Where(x => x.UserId == userId).OrderByDescending(x => x.CreatedOn).ToListAsync();
 
             //response modeli react icin düzenledim
             var response = orders.Select(x => new OrdersExportDto()
@@ -50,9 +60,9 @@ namespace Application.Features.Exports.Queries.OrdersExport
             exportPath = Path.Combine(exportPath, fileName);
 
             ExcelHelpers.ExportDataTableToExcel(dataTable, exportPath);
-            MailHelpers.SendMail(exportPath, "Order Export Excel", "Orders");
+            //MailHelpers.SendMail(exportPath, "Order Export Excel", "Orders", user.Email);
 
-            return new Response<string>($"Mail sent successfuly.");
+            return new Response<string>(fileName);
         }
     }
 }

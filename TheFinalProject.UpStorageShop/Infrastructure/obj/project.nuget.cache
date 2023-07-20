@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7a+pq6/Z1W582nzPYIogxS3yi/C3dNlL/YmQL4zL9+TXNIsPjoF1stInxnk0AB7jOCt0mzgV40pa3e4J+eRvTQ==",
+  "dgSpecHash": "SejJkMYCUyvk17JYqnJrg/NWUcvf+zhsW0xVkeKCBKOC5JLPu7UX/6q5aPXRH2fchiGz4f8eXhX0HMYZvS2CQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezgi\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\Ezgi\\.nuget\\packages\\closedxml\\0.101.0\\closedxml.0.101.0.nupkg.sha512",
@@ -168,7 +168,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Bağımlılık kısıtlaması dışında algılanan paket sürümü: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0, MediatR (>= 11.0.0 && < 12.0.0) gerektiriyor ancak sürüm MediatR 12.0.1 çözümlenmiş.",
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.0.1 was resolved.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net7.0"

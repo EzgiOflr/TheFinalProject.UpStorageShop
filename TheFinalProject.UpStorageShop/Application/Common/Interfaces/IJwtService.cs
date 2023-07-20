@@ -10,6 +10,7 @@ namespace Application.Common.Interfaces
 {
     public interface IJwtService
     {
-        JwtDto Generate(string userId, string email, string firstName, string lastName, List<string>? roles = null);
+        JwtDto Generate(Guid userId, string email, string firstName, string lastName, List<string> roles, bool isMailAllowed, bool isNotificationAllowed);
+        Guid? ValidateJwtToken(string token);
     }
 }

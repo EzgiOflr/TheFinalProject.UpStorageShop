@@ -1,5 +1,5 @@
 ﻿using Application.Features.Orders.Commands.Add;
-using Application.Features.Orders.Commands.Queries.GetOrders;
+using Application.Features.Orders.Queries.GetOrders;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +18,12 @@ namespace UpStorageShop.WebApi.Controllers
         public async Task<IActionResult> GetOrdersAsync(GetOrdersQuery query)
         {
             return Ok(await Mediator.Send(query));
+        }
+
+        [HttpPost("DeleteOrder")]
+        public async Task<IActionResult> DeleteOrderAsync(OrderDeleteCommand command)
+        {
+            return Ok(await Mediator.Send(command));
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Infrastructure.Services
             _jwtService = jwtService;
         }
 
-        public async Task<string> CreateUserAsync(CreateUserDto createUserDto, CancellationToken cancellationToken)
+        public async Task<Guid> CreateUserAsync(CreateUserDto createUserDto, CancellationToken cancellationToken)
         {
             var user = createUserDto.MapToUser();
 
@@ -41,9 +41,9 @@ namespace Infrastructure.Services
 
         }
 
-        public async Task<string> GenerateEmailActivationTokenAsync(string userId, CancellationToken cancellationToken)
+        public async Task<string> GenerateEmailActivationTokenAsync(Guid userId, CancellationToken cancellationToken)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId.ToString());
 
             return await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
@@ -65,7 +65,7 @@ namespace Infrastructure.Services
                 throw new ValidationException(CreateValidationFailure);
             }
 
-            return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName);
+            return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName, null, user.IsMailAllowed, user.IsNotificationAllowed);
         }
 
         public async Task<JwtDto> SocialLoginAsync(string email, string firstName, string lastName, CancellationToken cancellationToken)
@@ -73,9 +73,9 @@ namespace Infrastructure.Services
             var user = await _userManager.FindByEmailAsync(email);
 
             if (user is not null)
-                return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName);
+                return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName, null, user.IsMailAllowed, user.IsNotificationAllowed);
 
-            var userId = Guid.NewGuid().ToString();
+            var userId = Guid.NewGuid();
 
             user = new User()
             {
@@ -86,7 +86,7 @@ namespace Infrastructure.Services
                 FirstName = firstName,
                 LastName = lastName,
                 CreatedOn = DateTimeOffset.Now,
-                CreatedByUserId = userId,
+                CreatedByUserId = userId.ToString(),
             };
 
             var identityResult = await _userManager.CreateAsync(user);
@@ -99,7 +99,7 @@ namespace Infrastructure.Services
                 throw new ValidationException(failures);
             }
 
-            return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName);
+            return _jwtService.Generate(user.Id, user.Email, user.FirstName, user.LastName, null, user.IsMailAllowed, user.IsNotificationAllowed);
         }
 
         private List<ValidationFailure> CreateValidationFailure => new List<ValidationFailure>()

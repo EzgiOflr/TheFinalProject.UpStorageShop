@@ -3516,6 +3516,7 @@
       "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3529,6 +3530,7 @@
       "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3542,6 +3544,7 @@
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3611,6 +3614,7 @@
       "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3624,6 +3628,7 @@
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3665,6 +3670,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3706,6 +3712,7 @@
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -3719,6 +3726,7 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -7079,11 +7087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Ezgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Application\\obj\\",
+      "outputPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7104,8 +7112,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj"
+            "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj"
             }
           }
         }
@@ -7174,7 +7182,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Bağımlılık kısıtlaması dışında algılanan paket sürümü: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0, MediatR (>= 11.0.0 && < 12.0.0) gerektiriyor ancak sürüm MediatR 12.0.1 çözümlenmiş.",
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.0.1 was resolved.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net7.0"

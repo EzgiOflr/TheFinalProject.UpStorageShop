@@ -17875,11 +17875,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\UpStorageShop.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\UpStorageShop.WebApi.csproj",
       "projectName": "UpStorageShop.WebApi",
-      "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\UpStorageShop.WebApi.csproj",
+      "projectPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\UpStorageShop.WebApi.csproj",
       "packagesPath": "C:\\Users\\Ezgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\UpStorageShop.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -17900,11 +17900,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj": {
-              "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj"
+            "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj": {
+              "projectPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\BackgroundWorker\\BackgroundWorker.csproj"
             },
-            "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

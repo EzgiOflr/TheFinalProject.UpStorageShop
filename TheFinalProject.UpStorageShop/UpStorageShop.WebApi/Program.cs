@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using UpStorageShop.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -113,11 +114,14 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
+app.UseStaticFiles();
+
 app.UseAuthorization();
 
-
+app.UseMiddleware<JwtMiddleware>();
 
 app.MapHub<SeleniumLogHub>("/Hubs/SeleniumLogHub");
+app.MapHub<TriggerHub>("/Hubs/TriggerHub");
 
 app.MapControllers();
 

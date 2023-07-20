@@ -37,6 +37,9 @@ namespace Infrastructure.Persistence.Migrations.Upstorage
                     b.Property<int>("TotalFoundAmount")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Orders", (string)null);

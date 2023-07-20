@@ -24,7 +24,7 @@ namespace Application.Common.Models.Auth
         {
             return new User()
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = Guid.NewGuid(),
                 Email = this.Email,
                 FirstName = this.FirstName,
                 LastName = this.LastName,

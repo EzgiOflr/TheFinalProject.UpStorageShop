@@ -6,33 +6,39 @@ namespace Application.Common.Helpers
 {
     public class MailHelpers
     {
-        public static void SendMail(string filePath, string subject, string body)
+        public static void SendMail(string filePath, string subject, string body, string mail)
         {
-            var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Ezgi Oflar", "ezgioflar@gmail.com"));
-            message.To.Add(new MailboxAddress("Ezgi Oflar", "ezgioflar@gmail.com"));
-            message.Subject = subject;
-
-            var builder = new BodyBuilder();
-            builder.HtmlBody = body;
-
-            builder.Attachments.Add(filePath);
-
-            message.Body = builder.ToMessageBody();
-
-            using (var client = new SmtpClient())
+            try
             {
-                // Connect to the Gmail SMTP server
-                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("Ezgi Oflar", "ezgiforpc@gmail.com"));
+                message.To.Add(new MailboxAddress("Ezgi Oflar", mail));
+                message.Subject = subject;
 
-                // Authenticate with your Gmail account
-                client.Authenticate("ezgioflar@gmail.com", "Password");
+                var builder = new BodyBuilder();
+                builder.HtmlBody = body;
 
-                // Send the email
-                client.Send(message);
+                builder.Attachments.Add(filePath);
 
-                // Disconnect from the server
-                client.Disconnect(true);
+                message.Body = builder.ToMessageBody();
+
+                using (var client = new SmtpClient())
+                {
+                    // Connect to the Gmail SMTP server
+                    client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+
+                    // Authenticate with your Gmail account
+                    client.Authenticate("ezgiforpc@gmail.com", "ejkfbokuzldgtlfi");
+
+                    // Send the email
+                    client.Send(message);
+
+                    // Disconnect from the server
+                    client.Disconnect(true);
+                }
+            }
+            catch (Exception)
+            {
             }
         }
     }

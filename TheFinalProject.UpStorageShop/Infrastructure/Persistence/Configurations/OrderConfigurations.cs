@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
+using Domain.Identity;
+using System.Reflection.Emit;
 
 namespace Infrastructure.Persistance.Configurations
 {

@@ -10,10 +10,5 @@ namespace UpStorageShop.WebApi.Hubs
         {
             await Clients.AllExcept(Context.ConnectionId).SendAsync("NewSeleniumLogAdded", log);
         }
-
-        public async Task CrawlerTriggerAsync(CrawlerTriggerDto crawlerTriggerDto)
-        {
-            await Clients.AllExcept(Context.ConnectionId).SendAsync("ReactDataReceived", crawlerTriggerDto);
-        }
     }
 }

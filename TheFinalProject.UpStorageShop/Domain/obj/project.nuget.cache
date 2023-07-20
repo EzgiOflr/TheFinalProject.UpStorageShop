@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "liERfRI+Sx7tmyYNRQqDC24/8GXHBTOLInjkE/pYi4KLq7j3UgFkbHpu0FTYf/lHCTnEsNCk+nsW6kD5ETiZWw==",
+  "dgSpecHash": "tm+aYMzzXZKFQwkXaoI1QkukpEhJXMD2XQsRHTt8cadOdQzty/EzPR+8PlR3cAmU1tB36M5MtKJX9edwkGpysQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ezgi\\source\\repos\\TheFinalProject.UpStorageShop\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Ezgi\\Desktop\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop-main\\TheFinalProject.UpStorageShop\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezgi\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Ezgi\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

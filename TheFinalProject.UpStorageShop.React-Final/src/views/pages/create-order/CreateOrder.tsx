@@ -17,7 +17,7 @@ const CreateOrder = () => {
         const startConnection = async () => {
 
             const connection = new HubConnectionBuilder()
-                .withUrl(`https://localhost:7172/Hubs/SeleniumLogHub`)
+                .withUrl(`https://localhost:7172/Hubs/TriggerHub`)
                 .withAutomaticReconnect()
                 .build();
 

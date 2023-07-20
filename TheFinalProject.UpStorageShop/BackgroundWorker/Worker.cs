@@ -15,6 +15,8 @@ using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
+using Application.Features.Exports.Queries.GetProductsByOrderIdExport;
+using Application.Features.Exports.Queries.GetOrderEventsByOrderIdExport;
 
 namespace BackgroundWorker
 {
@@ -23,8 +25,13 @@ namespace BackgroundWorker
         private readonly ILogger<Worker> _logger;
         private readonly IServiceScopeFactory _serviceScopeFactory;
         private Timer _timer;
-        private readonly string _dataTransferHub = "https://localhost:7172/Hubs/SeleniumLogHub";
-        private readonly HubConnection hubConnection;
+        private readonly string _logHub = "https://localhost:7172/Hubs/SeleniumLogHub";
+        private readonly HubConnection _logHubConnection;
+
+        private readonly string _listenerHub = "https://localhost:7172/Hubs/TriggerHub";
+        private readonly HubConnection _listenerHubConnection;
+
+
         HttpClient httpClient = new HttpClient();
 
         IWebDriver driver = null;
@@ -38,23 +45,29 @@ namespace BackgroundWorker
             new DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver();
 
-            hubConnection = new HubConnectionBuilder()
-                 .WithUrl(_dataTransferHub)
+            _logHubConnection = new HubConnectionBuilder()
+                 .WithUrl(_logHub)
                  .WithAutomaticReconnect()
                  .Build();
+
+            _listenerHubConnection = new HubConnectionBuilder()
+                   .WithUrl(_listenerHub)
+                   .WithAutomaticReconnect()
+                   .Build();
 
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            hubConnection.On<CrawlerTriggerDto>("ReactDataReceived", (crawlerTriggerDto) =>
+            _listenerHubConnection.On<CrawlerTriggerDto>("ReactDataReceived", (crawlerTriggerDto) =>
             {
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", crawlerTriggerDto.Token);
 
                 Crawler(crawlerTriggerDto.ProductCount, crawlerTriggerDto.ProductType);
             });
 
-            await hubConnection.StartAsync(stoppingToken);
+            await _listenerHubConnection.StartAsync(stoppingToken);
+            await _logHubConnection.StartAsync(stoppingToken);
 
             while (!stoppingToken.IsCancellationRequested)
             {
@@ -106,18 +119,18 @@ namespace BackgroundWorker
                     if (currentPage == 1)
                     {
                         log = "Websiteye giriş yapıldı.";
-                        await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                        await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                         Console.WriteLine(log);
 
                         var pages = driver.FindElements(By.ClassName("page-number")).LastOrDefault().Text;
 
                         log = "Toplam " + pages + " sayfa ürün bulunduğu tespit edildi.";
-                        await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                        await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                         Console.WriteLine(log);
                     }
 
                     log = currentPage + ". sayfaya girildi.";
-                    await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                    await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                     Console.WriteLine(log);
 
                     await httpClient.PostAsJsonAsync("https://localhost:7172/api/OrderEvent/CreateOrderEvent", new OrderEventAddCommand()
@@ -180,7 +193,7 @@ namespace BackgroundWorker
 
 
                     log = currentPage + ". sayfa tarandı, " + pageProductCount + " ürün bulundu.";
-                    await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                    await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                     Console.WriteLine(log);
 
                     await httpClient.PostAsJsonAsync("https://localhost:7172/api/OrderEvent/CreateOrderEvent", new OrderEventAddCommand()
@@ -202,8 +215,11 @@ namespace BackgroundWorker
                     Status = Domain.Enums.OrderStatusEnum.OrderCompleted
                 });
 
+                await httpClient.PostAsJsonAsync("https://localhost:7172/api/Export/GetProductsByOrderIdExport", new GetProductsByOrderIdExportQuery(order.Id));
+                await httpClient.PostAsJsonAsync("https://localhost:7172/api/Export/GetOrderEventsByOrderIdExport", new GetOrderEventsByOrderIdExportQuery(order.Id));
+
                 log = "Toplamda " + productList.Count + " Ürün kazındı.";
-                await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                 Console.WriteLine(log);
 
             }
@@ -216,7 +232,7 @@ namespace BackgroundWorker
                 });
 
                 log = "Kazıma esnasında hata oluştu.";
-                await hubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
+                await _logHubConnection.InvokeAsync("SendLogNotificationAsync", CreateLog(log));
                 Console.WriteLine(log);
             }
         }
