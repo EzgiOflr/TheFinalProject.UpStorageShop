@@ -73,7 +73,7 @@ const CreateOrder = () => {
                 </CFormSelect>
             </CCardBody>
             <CCardFooter>
-                <CButton onClick={createOrder}>Crawl</CButton>
+                <CButton onClick={createOrder}>Create Order</CButton>
             </CCardFooter>
         </CCard>
     )

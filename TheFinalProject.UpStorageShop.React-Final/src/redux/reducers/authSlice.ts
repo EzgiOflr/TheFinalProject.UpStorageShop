@@ -26,7 +26,7 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
-        storeUser: (state, action: PayloadAction<UserObject>) => {
+        storeUser: (state, action: PayloadAction<UserObject | undefined>) => {
             state.user = action.payload
         },
         storeNotification: (state, action: PayloadAction<MessageModel>) => {

@@ -89,17 +89,12 @@ const Orders = () => {
 
             fetch("https://localhost:7172/Export/" + responseData.message)
                 .then(response => response.blob())
-                .then(blob => {
-                    // Dosyayı indirecek bir link oluşturun
+                .then(blob => {          
                     const downloadLink = URL.createObjectURL(blob);
-
-                    // Sanal bir <a> elemanı oluşturun ve indirme işlemini tetikleyin
                     const anchorElement = document.createElement('a');
                     anchorElement.href = downloadLink;
                     anchorElement.download = "Orders_" + responseData.message;
                     anchorElement.click();
-
-                    // Artık gerekli olmadığı için oluşturulan linki temizleyin
                     URL.revokeObjectURL(downloadLink);
                 })
                 .catch(error => {
