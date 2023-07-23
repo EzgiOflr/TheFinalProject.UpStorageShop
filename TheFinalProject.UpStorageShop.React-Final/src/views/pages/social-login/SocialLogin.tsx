@@ -29,23 +29,12 @@ const SocialLogin = () => {
 
         const expires: string | null = expiryDate;
 
-        // setAppUser({ id: uid, email, firstName: given_name, lastName: family_name, expires, accessToken });
-
         const localJwt: LocalJwt = {
             accessToken,
             expires
         }
 
         localStorage.setItem("upstorage_user", JSON.stringify(localJwt));
-
-        // navigate("/");
-
-        console.log(email);
-
-        console.log(given_name);
-
-        console.log(family_name);
-
 
         const hubCn = new HubConnectionBuilder().withUrl("https://localhost:7172/Hubs/SeleniumLogHub").build()
 
@@ -56,12 +45,14 @@ const SocialLogin = () => {
         })
 
         navigate('/')
+
         dispatch(storeUser({
             id: uid,
             email,
             firstName: given_name,
             lastName: family_name,
-            expires, accessToken,
+            expires,
+            accessToken,
             isNotificationAllowed: isNotificationAllowed == 'true',
             isMailAllowed: isMailAllowed == 'true'
         }))

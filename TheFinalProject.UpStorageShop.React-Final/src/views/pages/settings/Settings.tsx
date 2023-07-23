@@ -55,18 +55,6 @@ const Settings = () => {
                 <div className="mt-3">
                     <CFormSwitch onChange={(e) => changeMailState(e.target.checked)} label="I want to get Mails" checked={auth.user?.isMailAllowed} />
                 </div>
-                {/* <div className="mb-3">
-                    <CFormLabel htmlFor="exampleFormControlInput1">How many products do you want to crawl?</CFormLabel>
-                    <CFormInput onChange={(e) => setHowManyProducts(parseInt(e.target.value))} value={howManyProducts} type="number" />
-                </div>
-
-                <CFormLabel htmlFor="exampleFormControlInput1">What type of products you want to crawl?</CFormLabel>
-                <CFormSelect onChange={(e) => setProductType(e.target.value)} aria-label="Default select example">
-                    <option value="">Select</option>
-                    <option value="A">All</option>
-                    <option value="B">On Sale</option>
-                    <option value="C">Not On Sale</option>
-                </CFormSelect> */}
             </CCardBody>
         </CCard>
     )

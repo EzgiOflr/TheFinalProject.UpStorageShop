@@ -38,9 +38,6 @@ const App = () => {
                             <Routes>
                                 <Route path="*" element={<Login />} />
                                 <Route path="/social-login" element={<SocialLogin />} />
-                                <Route path="/register" element={<Register />} />
-                                <Route path="/404" element={<Page404 />} />
-                                <Route path="/500" element={<Page500 />} />
                             </Routes>
                         )
                 }
@@ -48,6 +45,5 @@ const App = () => {
         </HashRouter>
     )
 }
-
 
 export default App;
